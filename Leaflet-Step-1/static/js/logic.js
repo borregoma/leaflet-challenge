@@ -48,3 +48,10 @@ function createMap(earthquakes) {
     var quakeMarker = L.marker([location.lat, location.lon])
       .bindPopup("<h3>" + location.name + "<h3><h3>Magnitude: " + location.magnitude + "</h3>");
 
+      
+    // Add the marker to the earthMarkers array
+    earthMarkers.push(quakeMarker);
+  }
+
+}
+
