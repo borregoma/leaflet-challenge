@@ -19,3 +19,9 @@ function createMap(earthquakes) {
     "Earthquakes": earthquakes
      };
 
+     // Create the map object with options
+     var map = L.map("mapid", {
+      center: [33.2559, -116.3750],
+      zoom: 12, 
+      layers: [backmap, earthquakes]
+     });
