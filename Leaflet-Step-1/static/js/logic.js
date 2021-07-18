@@ -25,3 +25,9 @@ function createMap(earthquakes) {
       zoom: 12, 
       layers: [backmap, earthquakes]
      });
+
+    // Create a layer control, pass in the baseMaps and overlayMaps. Add the layer control to the map
+    L.control.layers(baseMaps, overlayMaps, {
+        collapsed: false
+        }).addTo(map);
+    }
