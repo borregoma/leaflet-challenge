@@ -40,3 +40,7 @@ function createMap(earthquakes) {
     // Initialize an array to hold Earthquakes markers
     var earthMarkers = [];
 
+    // Loop through the Earthquake locations array
+  for (var index = 0; index < locations.length; index++) {
+    var location = locations[index];
+
