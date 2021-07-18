@@ -53,5 +53,8 @@ function createMap(earthquakes) {
     earthMarkers.push(quakeMarker);
   }
 
+  // Create a layer group made from the Earthquake markers array, pass it into the createMap function
+  createMap(L.layerGroup(earthMarkers));
+
 }
 
