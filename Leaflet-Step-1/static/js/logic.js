@@ -44,3 +44,7 @@ function createMap(earthquakes) {
   for (var index = 0; index < locations.length; index++) {
     var location = locations[index];
 
+    // For each location, create a marker and bind a popup with the location's name
+    var quakeMarker = L.marker([location.lat, location.lon])
+      .bindPopup("<h3>" + location.name + "<h3><h3>Magnitude: " + location.magnitude + "</h3>");
+
