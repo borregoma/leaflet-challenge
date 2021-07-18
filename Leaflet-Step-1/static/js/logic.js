@@ -13,3 +13,9 @@ function createMap(earthquakes) {
     var baseMaps = {
         "Background Map": backmap
     };
+
+    // Create an overlayMaps object to hold the Earthquake layer
+  var overlayMaps = {
+    "Earthquakes": earthquakes
+     };
+
