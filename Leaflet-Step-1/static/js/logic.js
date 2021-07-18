@@ -30,4 +30,13 @@ function createMap(earthquakes) {
     L.control.layers(baseMaps, overlayMaps, {
         collapsed: false
         }).addTo(map);
-    }
+ }
+
+ function createMarkers(response) {
+
+    // Pull the "locations" property off of response.data
+    var locations = response.data.stations;
+  
+    // Initialize an array to hold Earthquakes markers
+    var earthMarkers = [];
+
