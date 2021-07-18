@@ -35,7 +35,7 @@ function createMap(earthquakes) {
  function createMarkers(response) {
 
     // Pull the "locations" property off of response.data
-    var locations = response.data.stations;
+    var locations = response.data.locations;
   
     // Initialize an array to hold Earthquakes markers
     var earthMarkers = [];
