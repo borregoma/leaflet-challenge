@@ -8,3 +8,8 @@ function createMap(earthquakes) {
       id: "light-v10",
       accessToken: API_KEY
     }); 
+
+     // Create a baseMaps object to hold the backmap layer
+    var baseMaps = {
+        "Background Map": backmap
+    };
