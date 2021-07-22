@@ -1,5 +1,5 @@
  // Create Map fuction for Earthquakes
- function createMap(earthquakes) {
+ function createMap(earthQuakes) {
 
     // Create the tile layer that will be the background of our map
     var backmap = L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
