@@ -17,17 +17,17 @@
     var url = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson";
 
 
-//    d3.json(url).then(function(data) {
-//        for (var i=0; i < data.lenght; i++){
-//            var geometry = data[i].features.addTo(myMap);
-            
- //           if (geometry) {
- //             L.marker([geometry.coordinates[0], geometry.type[1]]).addTo(myMap);
-
-//            }
-       // console.log(data);
-//       }
-//    });
+    d3.json(url).then(function(response) {
+        var features = response.features;
+        for (var i=0; i < response.lenght; i++){
+            var geometry = response[i].features.addTo(myMap);
+        }
+    });
+           if (geometry) {
+             L.marker([geometry.coordinates[0], geometry.mag[1]]).addTo(myMap);
+             console.log(geometry);
+           }
+//    };
     
 //      var heatArray = [];
     
