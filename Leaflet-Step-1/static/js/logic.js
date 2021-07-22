@@ -25,19 +25,26 @@
 
         for (var i=0; i < features.lenght; i++){
             var feature = features [i];
-            var properties = feature.properties.place;
+            var property = feature.properties.place;
             var geometry = feature.geometry.coordinates;
             var mag = feature.properties.mag;
             var id = feature.properties.id;
             var type = feature.geometry.type;
-        }
+            var quakeMarker = L.circleMarker([geometry[0], geometry[1]], {
+                fillOpacy: .5,
+                weight: .5,
+                color: "orange",
+                fillColor: quakeMarkerColor(geometry[2]),
+                radius: (mag * 5)
+            }).bindPopup(`<h1>${id}</h1><hr><h3>Location: ${property}</h3><hr><h3>Magnitude: ${mag}</h3>`);
+            quakesArray.push(quakeMarker);
     
-    });
+    };
 
 //    .addTo(myMap);
 //    });
 //           if (geometry) {
-//             L.marker([geometry.coordinates[0], geometry.mag[1]]).addTo(myMap);
+//             
 //             console.log(geometry);
 //           }
 //    };
