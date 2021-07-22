@@ -18,15 +18,28 @@
 
 
     d3.json(url).then(function(response) {
+
         var features = response.features;
-        for (var i=0; i < response.lenght; i++){
-            var geometry = response[i].features.addTo(myMap);
+
+        var quakesArray = [];
+
+        for (var i=0; i < features.lenght; i++){
+            var feature = features [i];
+            var properties = feature.properties.place;
+            var geometry = feature.geometry.coordinates;
+            var mag = feature.properties.mag;
+            var id = feature.properties.id;
+            var type = feature.geometry.type;
         }
+    
     });
-           if (geometry) {
-             L.marker([geometry.coordinates[0], geometry.mag[1]]).addTo(myMap);
-             console.log(geometry);
-           }
+
+//    .addTo(myMap);
+//    });
+//           if (geometry) {
+//             L.marker([geometry.coordinates[0], geometry.mag[1]]).addTo(myMap);
+//             console.log(geometry);
+//           }
 //    };
     
 //      var heatArray = [];
